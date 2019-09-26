@@ -1,6 +1,6 @@
 import random
 
-
+# 空间复杂度O(1) 原地排序
 def quick_sort(nums):
     _quick_sort_between(nums, 0, len(nums) - 1)
 

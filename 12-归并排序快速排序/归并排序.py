@@ -1,3 +1,4 @@
+# 空间复杂度O(n)
 def merge_sort(nums):
     n = len(nums)
     _merge_sort_between(nums, 0, n - 1)
