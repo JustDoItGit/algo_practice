@@ -22,8 +22,7 @@ def _merge(nums, low, mid, high):
         else:
             tmp.append(nums[j])
             j += 1
-    start = i if i <= mid else j
-    end = mid if i <= mid else high
+    start, end = (i, mid) if i <= mid else (j, high)
     tmp.extend(nums[start: end + 1])
     nums[low: high + 1] = tmp
 
@@ -38,5 +37,8 @@ test_ls = [3, 4]
 merge_sort(test_ls)
 print(test_ls)
 test_ls = [5, 2, 3, 1]
+merge_sort(test_ls)
+print(test_ls)
+test_ls = [-4, 5, 2, 3, 1, -9]
 merge_sort(test_ls)
 print(test_ls)
