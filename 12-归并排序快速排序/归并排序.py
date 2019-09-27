@@ -22,14 +22,10 @@ def _merge(nums, low, mid, high):
         else:
             tmp.append(nums[j])
             j += 1
-    if i <= mid:
-        start = i
-        end = mid
-    else:
-        start = j
-        end = high
+    start = i if i <= mid else j
+    end = mid if i <= mid else high
     tmp.extend(nums[start: end + 1])
-    nums[low:high + 1] = tmp
+    nums[low: high + 1] = tmp
 
 
 test_ls = [3, 5, 38, 2, 1]
