@@ -6,7 +6,8 @@ def merge_sort(nums):
 
 def _merge_sort_between(nums, low, high):
     if low < high:
-        mid = (low + high) // 2
+        # 防止溢出
+        mid = low + (high - low) // 2
         _merge_sort_between(nums, low, mid)
         _merge_sort_between(nums, mid + 1, high)
         _merge(nums, low, mid, high)
