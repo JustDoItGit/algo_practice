@@ -16,4 +16,4 @@ def bsearch_internally(nums, low, high, target):
 
 
 test_nums, tar = [1, 2, 3, 4, 5], 4
-print(bsearch(test_nums, tar))
+print(bsearch(test_nums, tar) == 3)
