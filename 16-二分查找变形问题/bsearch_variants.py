@@ -1,7 +1,7 @@
 def bsearch_left(nums, target):
     low, high = 0, len(nums) - 1
     while low <= high:
-        mid = low + (high - low) // 2
+        mid = low + (high - low >> 1)
         if nums[mid] > target:
             high = mid - 1
         elif nums[mid] < target:
@@ -17,7 +17,7 @@ def bsearch_left(nums, target):
 def bsearch_right(nums, target):
     low, high = 0, len(nums) - 1
     while low <= high:
-        mid = low + (high - low) // 2
+        mid = low + (high - low >> 1)
         if nums[mid] > target:
             high = mid - 1
         elif nums[mid] < target:
@@ -34,7 +34,7 @@ def bsearch_left_not_less(nums, target):
     """查找第一个大于等于给定值的元素"""
     low, high = 0, len(nums) - 1
     while low <= high:
-        mid = low + (high - low) // 2
+        mid = low + (high - low >> 1)
         if nums[mid] >= target:
             if mid == 0 or nums[mid - 1] < target:
                 return mid
@@ -49,7 +49,7 @@ def bsearch_right_not_greater(nums, target):
     """查找最后一个小于等于给定值的元素"""
     low, high = 0, len(nums) - 1
     while low <= high:
-        mid = low + (high - low) // 2
+        mid = low + (high - low >> 1)
         if nums[mid] > target:
             high = mid - 1
         else:
