@@ -3,7 +3,7 @@ def bubble(ls):
     if n <= 1:
         return ls
 
-    for i in range(n):
+    for i in range(n - 1):
         flag = False
         for j in range(n - i - 1):
             if ls[j] > ls[j + 1]:
